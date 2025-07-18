@@ -5,7 +5,7 @@
   height: auto;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 6rem; /* Misma altura que experiencia y formación */
+  padding-top: 4rem; /* Reducido para móvil */
 }
 
 .contacto-content.content-section {
@@ -52,21 +52,24 @@
 }
 
 .contacto-item {
-  width: 100%;
-  max-width: 800px;
-  background: 
-    linear-gradient(135deg, rgb(30 41 59 / 40%) 0%, rgb(15 23 42 / 30%) 100%);
-  border: 1px solid rgb(148 163 184 / 20%);
-  border-radius: 16px;
+  background: linear-gradient(145deg, 
+    rgb(255 255 255 / 8%) 0%, 
+    rgb(255 255 255 / 3%) 50%, 
+    rgb(0 0 0 / 15%) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-left: 4px solid #6b7280;
+  margin-bottom: 2.5rem;
   padding: 2rem;
-  backdrop-filter: blur(20px);
-  box-shadow: 
-    0 4px 6px -1px rgb(0 0 0 / 20%),
-    0 2px 4px -2px rgb(0 0 0 / 20%),
-    inset 0 1px 0 rgb(255 255 255 / 10%);
-  transition: all 0.3s ease;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  max-width: 1000px;
   position: relative;
   overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgb(0 0 0 / 12%),
+    inset 0 1px 0 rgb(255 255 255 / 10%);
 }
 
 .contacto-item::before {
@@ -76,37 +79,53 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgb(96 165 250 / 50%), transparent);
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #6b7280 20%, 
+    #9ca3af 50%, 
+    #6b7280 80%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .contacto-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 
-    0 8px 25px -5px rgb(0 0 0 / 30%),
-    0 8px 10px -6px rgb(0 0 0 / 30%),
-    inset 0 1px 0 rgb(255 255 255 / 15%);
-  border-color: rgb(59 130 246 / 30%);
+    0 20px 60px rgb(107 114 128 / 15%),
+    0 8px 32px rgb(0 0 0 / 20%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+  border-color: rgb(107 114 128 / 30%);
+}
+
+.contacto-item:hover::before {
+  opacity: 1;
 }
 
 .contacto-titulo {
+  color: #6b7280;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #fff;
   margin-bottom: 1rem;
   line-height: 1.3;
+  letter-spacing: -0.02em;
   text-align: center;
+  background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+  background-clip: text;
+  position: relative;
 }
 
 .contacto-descripcion {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
 .contacto-descripcion p {
-  color: #cbd5e1;
+  color: #e8e8e8;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin: 0;
+  font-weight: 400;
 }
 
 .contacto-detalle {
@@ -195,10 +214,225 @@
 }
 
 .contacto-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contacto-social-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin-top: 2rem;
+  width: 100%;
+}
+
+.contacto-social-link {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  padding: 2rem;
+  border-radius: 16px;
+  background: linear-gradient(145deg, 
+    rgb(255 255 255 / 8%) 0%, 
+    rgb(255 255 255 / 3%) 50%, 
+    rgb(0 0 0 / 15%) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgb(0 0 0 / 12%),
+    inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+
+.contacto-social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    currentcolor 20%, 
+    currentcolor 50%, 
+    currentcolor 80%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.contacto-social-link:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgb(0 0 0 / 20%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+  border-color: rgb(255 255 255 / 25%);
+}
+
+.contacto-social-link:hover::before {
+  opacity: 1;
+}
+
+.contacto-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: white;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 20%);
+  box-shadow: 
+    0 8px 16px rgb(0 0 0 / 20%),
+    inset 0 1px 0 rgb(255 255 255 / 30%);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-social-icon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgb(255 255 255 / 20%) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.contacto-social-link:hover .contacto-social-icon {
+  transform: scale(1.1);
+  box-shadow: 
+    0 12px 24px rgb(0 0 0 / 25%),
+    inset 0 1px 0 rgb(255 255 255 / 40%);
+}
+
+.contacto-social-link:hover .contacto-social-icon::before {
+  left: 100%;
+}
+
+.contacto-social-info {
+  flex: 1;
+}
+
+.contacto-social-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.contacto-social-subtitle {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin: 0;
+  line-height: 1.4;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Colores específicos para cada red social - con bordes izquierdos como formación */
+.contacto-social-link.linkedin {
+  border-left: 4px solid #0077b5;
+}
+
+.contacto-social-link.linkedin .contacto-social-icon {
+  background: linear-gradient(135deg, 
+    rgb(0 119 181 / 90%) 0%, 
+    rgb(0 88 133 / 90%) 100%);
+}
+
+.contacto-social-link.linkedin:hover {
+  border-color: rgb(0 119 181 / 30%);
+  box-shadow: 
+    0 20px 60px rgb(0 119 181 / 15%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+}
+
+.contacto-social-link.github {
+  border-left: 4px solid #333;
+}
+
+.contacto-social-link.github .contacto-social-icon {
+  background: linear-gradient(135deg, 
+    rgb(51 51 51 / 90%) 0%, 
+    rgb(0 0 0 / 90%) 100%);
+}
+
+.contacto-social-link.github:hover {
+  border-color: rgb(156 163 175 / 30%);
+  box-shadow: 
+    0 20px 60px rgb(156 163 175 / 8%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+}
+
+.contacto-social-link.email {
+  border-left: 4px solid #ea4335;
+}
+
+.contacto-social-link.email .contacto-social-icon {
+  background: linear-gradient(135deg, 
+    rgb(234 67 53 / 90%) 0%, 
+    rgb(194 51 33 / 90%) 100%);
+}
+
+.contacto-social-link.email:hover {
+  border-color: rgb(234 67 53 / 30%);
+  box-shadow: 
+    0 20px 60px rgb(234 67 53 / 15%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+}
+
+.contacto-social-link.phone {
+  border-left: 4px solid #34d399;
+}
+
+.contacto-social-link.phone .contacto-social-icon {
+  background: linear-gradient(135deg, 
+    rgb(52 211 153 / 90%) 0%, 
+    rgb(16 185 129 / 90%) 100%);
+}
+
+.contacto-social-link.phone:hover {
+  border-color: rgb(52 211 153 / 30%);
+  box-shadow: 
+    0 20px 60px rgb(52 211 153 / 8%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+}
+
+.contacto-social-link.cv {
+  border-left: 4px solid #8b5cf6;
+}
+
+.contacto-social-link.cv .contacto-social-icon {
+  background: linear-gradient(135deg, 
+    rgb(139 92 246 / 90%) 0%, 
+    rgb(124 58 237 / 90%) 100%);
+}
+
+.contacto-social-link.cv:hover {
+  border-color: rgb(139 92 246 / 30%);
+  box-shadow: 
+    0 20px 60px rgb(139 92 246 / 12%),
+    0 8px 32px rgb(0 0 0 / 15%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
 }
 
 .contacto-info-item {
@@ -230,7 +464,42 @@
   }
 }
 
+@media (width <= 1024px) {
+  .contacto-social-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (width <= 768px) {
+  .contacto-hero.section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contacto-hero.section .hero-content {
+    padding: 2.5rem 2rem;
+    margin: 0 1rem;
+  }
+  
+  .contacto-social-links {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .contacto-social-link {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .contacto-social-icon {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .contacto-social-title {
+    font-size: 1.2rem;
+  }
+  
   .contacto-info-grid {
     margin-top: 1.5rem;
   }
@@ -265,17 +534,59 @@
   .contacto-value {
     font-size: 1.1rem;
   }
-  
-  .contacto-mapa-item {
-    padding: 1.5rem;
+}
+
+@media (width <= 600px) {
+  .contacto-hero.section {
+    align-items: center;
+    justify-content: center;
   }
-  
-  .contacto-mapa iframe {
-    height: 280px;
+
+  .contacto-hero.section .hero-content {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
   }
-  
-  .contacto-subtitle-mapa {
-    font-size: 1rem;
+
+  .contacto-content.section {
+    padding-top: 1rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contacto-container {
+    padding: 0.5rem;
+    margin-top: 0;
+    width: 95vw;
+  }
+
+  .contacto-info-item {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (width <= 400px) {
+  .contacto-content.section {
+    padding-top: 0.5rem;
+  }
+
+  .contacto-container {
+    padding: 0.3rem;
+    width: 98vw;
+  }
+
+  .contacto-info-item {
     margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .contacto-value {
+    font-size: 0.9rem;
+  }
+
+  .contacto-icon {
+    min-width: 40px;
+    height: 40px;
   }
 }

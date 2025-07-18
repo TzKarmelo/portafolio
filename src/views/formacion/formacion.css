@@ -5,7 +5,7 @@
   height: auto;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 6rem; /* Reducido para que se vea mejor el primer bloque */
+  padding-top: 4rem; /* Reducido para móvil */
 }
 
 .formacion-content.content-section {
@@ -18,6 +18,7 @@
   min-height: 100vh;
   height: auto;
   position: relative;
+  padding-bottom: 40px;
 }
 
 .formacion-content.content-section::before {
@@ -268,6 +269,16 @@
 }
 
 @media (width <= 768px) {
+  .formacion-hero.section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formacion-hero.section .hero-content {
+    padding: 2.5rem 2rem;
+    margin: 0 1rem;
+  }
+  
   .formacion-lista {
     padding: 1rem;
   }
@@ -303,5 +314,72 @@
   
   .formacion-destacado {
     padding: 1.25rem;
+  }
+}
+
+@media (width <= 600px) {
+  .formacion-hero.section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formacion-hero.section .hero-content {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .formacion-content.section {
+    padding-top: 1rem;
+    padding-bottom: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    height: auto;
+  }
+
+  .formacion-lista {
+    padding: 0.5rem;
+    margin-top: 0;
+    margin-bottom: 30px;
+    width: 95vw;
+  }
+
+  .formacion-item {
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (width <= 400px) {
+  .formacion-content.section {
+    padding-top: 0.5rem;
+    padding-bottom: 50px;
+    min-height: auto;
+    height: auto;
+  }
+
+  .formacion-lista {
+    padding: 0.3rem;
+    width: 98vw;
+    margin-bottom: 40px;
+  }
+
+  .formacion-item {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .formacion-titulo {
+    font-size: 1.1rem;
+  }
+
+  .formacion-institucion {
+    font-size: 0.85rem;
+  }
+
+  .formacion-descripcion {
+    font-size: 0.8rem;
+    line-height: 1.5;
   }
 }

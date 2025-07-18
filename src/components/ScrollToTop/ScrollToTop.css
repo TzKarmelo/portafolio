@@ -1,7 +1,7 @@
 /* Botón flotante para volver al inicio */
 .scroll-to-top {
   position: fixed;
-  bottom: 30px;
+  bottom: 45px;
   right: 60px;
   width: 50px;
   height: 50px;
@@ -147,7 +147,7 @@
 /* Responsive */
 @media (width <= 768px) {
   .scroll-to-top {
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     width: 45px;
     height: 45px;

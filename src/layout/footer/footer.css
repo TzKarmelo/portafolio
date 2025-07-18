@@ -11,10 +11,136 @@
   border-top: 1px solid rgb(255 255 255 / 8%);
   color: rgb(255 255 255 / 85%);
   text-align: center;
-  padding: 12px 0;
+  padding: 8px 0;
   z-index: 100;
   box-shadow: 
     0 -1px 20px rgb(0 0 0 / 5%),
     inset 0 1px 0 rgb(255 255 255 / 8%),
     0 0 80px rgb(255 255 255 / 3%);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgb(255 255 255 / 85%);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 6%) 0%, 
+    rgb(255 255 255 / 3%) 50%, 
+    rgb(0 0 0 / 5%) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgb(255 255 255 / 10%);
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 10%) 0%, 
+    rgb(255 255 255 / 6%) 50%, 
+    rgb(0 0 0 / 3%) 100%);
+  border-color: rgb(255 255 255 / 20%);
+  box-shadow: 
+    0 8px 25px rgb(0 0 0 / 15%),
+    0 0 40px rgb(255 255 255 / 8%);
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-icon.linkedin {
+  background: linear-gradient(135deg, #0077b5, #005885);
+}
+
+.social-icon.github {
+  background: linear-gradient(135deg, #333, #000);
+}
+
+.social-icon.email {
+  background: linear-gradient(135deg, #ea4335, #c23321);
+}
+
+.social-icon svg {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .footer-social-links {
+    gap: 16px;
+  }
+  
+  .social-link {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  
+  .social-link span {
+    display: none;
+  }
+  
+  .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .social-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .footer-copyright {
+    display: none !important;
+  }
+}
+
+@media (width <= 480px) {
+  .footer-social-links {
+    gap: 12px;
+  }
+  
+  .social-link {
+    padding: 8px;
+    border-radius: 50%;
+  }
+  
+  .footer-copyright {
+    display: none !important;
+  }
 }

@@ -1,9 +1,9 @@
 /* Scrollbar personalizada con efecto Glass de Apple - BLANCO */
 .custom-scrollbar {
   position: fixed;
-  top: 80px;
+  top: 100px;
   right: 15px;
-  bottom: 60px;
+  bottom: 80px;
   width: 8px;
   background: rgb(255 255 255 / 6%);
   backdrop-filter: blur(60px);
@@ -125,4 +125,21 @@
     0 0 60px rgb(255 255 255 / 8%),
     0 0 40px rgb(255 255 255 / 15%);
   animation: none;
+}
+
+/* Responsive - Ocultar en móvil */
+@media (width <= 768px) {
+  .custom-scrollbar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+}
+
+@media (width <= 480px) {
+  .custom-scrollbar {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
 }
