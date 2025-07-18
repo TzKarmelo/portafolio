@@ -5,7 +5,7 @@
   height: auto;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 4rem; /* Reducido para móvil */
+  padding-top: 6rem; /* Aumentado para evitar solapamiento con header */
 }
 
 .experiencia-content.content-section {
@@ -18,6 +18,11 @@
   min-height: 100vh;
   height: auto;
   position: relative;
+  padding-bottom: 160px;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .experiencia-content.content-section::before {
@@ -41,12 +46,14 @@
 .experiencia-grid {
   max-width: 1200px;
   width: 100%;
-  padding: 2rem;
-  padding-bottom: 4rem;
+  padding: 2rem 1rem; /* Ajustado el padding lateral */
+  padding-bottom: 6rem;
   color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
   align-items: center;
   justify-content: flex-start;
 }
@@ -109,8 +116,8 @@
   align-items: center;
   gap: 1.5rem;
   margin-bottom: 1rem;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
   position: relative;
 }
 
@@ -130,8 +137,6 @@
   overflow: hidden;
   padding: 8px;
   backdrop-filter: blur(10px);
-  position: absolute;
-  left: 0;
 }
 
 .experiencia-logo::before {
@@ -186,8 +191,10 @@
 
 .experiencia-info {
   flex: 1;
-  text-align: center;
+  text-align: left;
   width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .experiencia-title {
@@ -330,45 +337,99 @@
   }
   
   .experiencia-content.section {
-    padding: 1rem;
+    padding: 1rem 0.5rem;
+    padding-top: 5rem; /* Espacio extra para evitar solapamiento */
   }
   
   .experiencia-grid {
-    gap: 2rem;
-    padding: 1rem 0;
+    gap: 1.5rem;
+    padding: 0.5rem 0.3rem; /* Ajustado padding lateral */
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   
   .experiencia-block {
-    padding: 1.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
   }
   
   .experiencia-header {
     flex-direction: column;
     text-align: center;
-    gap: 1rem;
+    gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
   
   .experiencia-logo {
     width: 50px;
     height: 50px;
     position: static;
+    margin: 0 auto;
   }
   
   .experiencia-logo img {
     width: 30px;
     height: 30px;
   }
+
+  .experiencia-info {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
   
   .experiencia-title {
     font-size: 1.2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
   }
   
   .experiencia-institution {
     font-size: 1rem;
+    text-align: center;
+  }
+
+  .experiencia-date {
+    text-align: center;
+  }
+
+  .experiencia-location {
+    text-align: center;
+  }
+
+  .experiencia-description {
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .experiencia-description p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .experiencia-highlighted {
+    text-align: center;
+    margin: 1rem auto;
+  }
+
+  .experiencia-highlighted p {
+    text-align: center;
   }
   
   .experiencia-skills {
     justify-content: center;
+    margin-top: 1rem;
   }
 }
 
@@ -384,50 +445,193 @@
   }
 
   .experiencia-content.section {
-    padding-top: 1rem;
+    padding: 0.3rem;
+    padding-top: 4.5rem; /* Aumentado para evitar solapamiento */
+    padding-bottom: 40px;
     align-items: center;
     justify-content: flex-start;
   }
 
   .experiencia-grid {
-    padding: 0.5rem;
-    margin-top: 0;
+    padding: 0.3rem 0.2rem; /* Ajustado padding lateral */
+    margin: 0 auto;
+    margin-bottom: 60px; /* Aumentado */
     width: 95vw;
+    max-width: 95vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
-  .experiencia-item {
-    margin-bottom: 1.5rem;
-    padding: 1.2rem;
+  .experiencia-block {
+    margin: 0 auto 1.5rem;
+    padding: 1rem 0.8rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .experiencia-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .experiencia-logo {
+    margin: 0 auto;
+  }
+
+  .experiencia-info {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .experiencia-title {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    margin: 0 auto 0.5rem;
+    line-height: 1.3;
+  }
+
+  .experiencia-institution,
+  .experiencia-date,
+  .experiencia-location {
+    text-align: center;
+    margin: 0.2rem auto;
+  }
+
+  .experiencia-description {
+    text-align: center;
+    margin: 1rem auto;
+    padding: 0;
+  }
+
+  .experiencia-description p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+  }
+
+  .experiencia-highlighted {
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+
+  .experiencia-highlighted p {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .experiencia-skills {
+    justify-content: center;
+    margin: 1rem auto 0;
   }
 }
 
 @media (width <= 400px) {
   .experiencia-content.section {
-    padding-top: 0.5rem;
+    padding: 0.2rem;
+    padding-top: 4rem; /* Aumentado para evitar solapamiento */
+    padding-bottom: 50px;
   }
 
   .experiencia-grid {
-    padding: 0.3rem;
+    padding: 0.2rem 0.1rem; /* Ajustado padding lateral */
+    margin: 0 auto;
+    margin-bottom: 80px; /* Aumentado */
     width: 98vw;
+    max-width: 98vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
-  .experiencia-item {
-    margin-bottom: 1rem;
-    padding: 1rem;
+  .experiencia-block {
+    margin: 0 auto 1rem;
+    padding: 0.8rem 0.6rem;
     border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
-  .experiencia-titulo {
+  .experiencia-header {
+    margin-bottom: 0.8rem;
+  }
+
+  .experiencia-title {
     font-size: 1.1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    margin: 0 auto 0.4rem;
+    line-height: 1.2;
   }
 
-  .experiencia-empresa {
+  .experiencia-institution {
     font-size: 0.85rem;
+    word-wrap: break-word;
+    text-align: center;
+    margin: 0.2rem auto;
   }
 
-  .experiencia-descripcion {
+  .experiencia-date {
     font-size: 0.8rem;
-    line-height: 1.5;
+    text-align: center;
+    margin: 0.2rem auto;
+  }
+
+  .experiencia-location {
+    font-size: 0.75rem;
+    text-align: center;
+    margin: 0.2rem auto;
+  }
+
+  .experiencia-description {
+    margin: 0.8rem auto;
+    padding: 0;
+  }
+
+  .experiencia-description p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .experiencia-highlighted {
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+  }
+
+  .experiencia-highlighted p {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+    padding-left: 0;
+    line-height: 1.4;
+  }
+
+  .experiencia-skills {
+    margin: 0.8rem auto 0;
+    gap: 0.4rem;
+  }
+
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
   }
 }
 

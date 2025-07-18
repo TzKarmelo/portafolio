@@ -18,7 +18,11 @@
   min-height: 100vh;
   height: auto;
   position: relative;
-  padding-bottom: 40px;
+  padding-bottom: 160px;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
 .formacion-content.content-section::before {
@@ -41,13 +45,15 @@
 .formacion-lista {
   max-width: 1200px;
   width: 100%;
-  padding: 2rem;
-  padding-bottom: 4rem; /* Añade espacio extra al final */
+  padding: 2rem 1rem; /* Ajustado el padding lateral */
+  padding-bottom: 6rem; /* Aumentado para dar más espacio al final */
   color: #fff;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
   justify-content: flex-start;
 }
 
@@ -280,7 +286,11 @@
   }
   
   .formacion-lista {
-    padding: 1rem;
+    padding: 1rem 0.5rem; /* Ajustado padding lateral */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
   
   .formacion-item {
@@ -338,10 +348,12 @@
   }
 
   .formacion-lista {
-    padding: 0.5rem;
+    padding: 0.5rem 0.3rem; /* Ajustado padding lateral */
     margin-top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 60px; /* Aumentado */
     width: 95vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .formacion-item {
@@ -359,9 +371,11 @@
   }
 
   .formacion-lista {
-    padding: 0.3rem;
+    padding: 0.3rem 0.2rem; /* Ajustado padding lateral */
     width: 98vw;
-    margin-bottom: 40px;
+    margin-bottom: 80px; /* Aumentado */
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .formacion-item {

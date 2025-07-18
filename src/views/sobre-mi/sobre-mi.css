@@ -21,6 +21,11 @@
     linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
   min-height: 100vh;
   position: relative;
+  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding-bottom: 160px;
 }
 
 .sobre-mi-content.content-section::before {

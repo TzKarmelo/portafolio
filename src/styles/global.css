@@ -83,6 +83,10 @@ body,
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  width: auto;
+  max-width: 90vw;
+  min-width: 320px;
+  transition: all 0.3s ease;
 }
 
 .hero-welcome {
@@ -283,6 +287,8 @@ body,
     width: auto !important;
     height: auto !important;
     max-width: 90vw !important;
+    min-width: 280px !important;
+    transition: all 0.3s ease !important;
   }
 
   .hero-title {
@@ -339,6 +345,8 @@ body,
     width: auto !important;
     height: auto !important;
     max-width: 85vw !important;
+    min-width: 260px !important;
+    transition: all 0.3s ease !important;
   }
 
   .content-title {
@@ -372,12 +380,12 @@ body,
 @media (width <= 400px) {
   .content-description {
     margin-bottom: 0;
-    padding-top: 30px;
+    padding-top: 120px;
   }
 
   .content-foto {
     margin-top: -20px;
-    padding-top: 0;
+    padding-top: 30px;
   }
 
   .content-foto-img {
@@ -390,7 +398,9 @@ body,
     padding: 1rem !important;
     margin: 0 auto !important;
     max-width: 80vw !important;
+    min-width: 240px !important;
     text-align: center !important;
+    transition: all 0.3s ease !important;
   }
 
   .hero-title {

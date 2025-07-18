@@ -1,10 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import './ScrollToTop.css';
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
   const [isWaveActive, setIsWaveActive] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const location = useLocation();
+
+  // Resetear visibilidad cuando cambia la ruta
+  useEffect(() => {
+    setIsVisible(false);
+  }, [location.pathname]);
 
   useEffect(() => {
     let scrollContainer: Element | Window | null = null;
@@ -67,23 +74,23 @@ export default function ScrollToTop() {
       } else {
         (scrollContainer as Element).addEventListener('scroll', toggleVisibility, { passive: true });
       }
+      
+      // Ejecutar una vez para establecer el estado inicial
+      toggleVisibility();
     };
 
-    // Configurar listener inicial
-    setupScrollListener();
-    
-    // Reconfigurar listener cada cierto tiempo para detectar cambios de página
-    const interval = setInterval(setupScrollListener, 1000);
+    // Configurar listener inicial con un pequeño delay para que el DOM esté listo
+    const timeoutId = setTimeout(setupScrollListener, 100);
 
     // Limpiar al desmontar
     return () => {
-      clearInterval(interval);
+      clearTimeout(timeoutId);
       if (scrollContainer && scrollContainer !== window) {
         (scrollContainer as Element).removeEventListener('scroll', toggleVisibility);
       }
       window.removeEventListener('scroll', toggleVisibility);
     };
-  }, []);
+  }, [location.pathname]); // Dependencia en location.pathname para reconfigurar en cada cambio de ruta
 
   const scrollToTop = () => {
     // Activar efecto de onda de luz
