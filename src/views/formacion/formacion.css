@@ -1,0 +1,307 @@
+/* Estilos específicos para la vista de formación */
+
+/* Estilos específicos para las secciones de formación */
+.formacion-content.section {
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 6rem; /* Reducido para que se vea mejor el primer bloque */
+}
+
+.formacion-content.content-section {
+  align-items: center;
+  justify-content: flex-start;
+  background: 
+    radial-gradient(ellipse at top left, rgb(14 165 233 / 8%) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgb(6 182 212 / 6%) 0%, transparent 50%),
+    linear-gradient(180deg, #0a0a0a 0%, #121212 50%, #0f0f0f 100%);
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+}
+
+.formacion-content.content-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(45deg, transparent 0%, rgb(14 165 233 / 2%) 50%, transparent 100%),
+    linear-gradient(0deg, rgb(0 0 0 / 30%) 0%, transparent 20%, transparent 80%, rgb(0 0 0 / 30%) 100%);
+  pointer-events: none;
+}
+
+/* Estilos específicos para el hero de formación */
+.formacion-hero.section {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.formacion-lista {
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  padding-bottom: 4rem; /* Añade espacio extra al final */
+  color: #fff;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.formacion-item {
+  background: linear-gradient(145deg, 
+    rgb(255 255 255 / 8%) 0%, 
+    rgb(255 255 255 / 3%) 50%, 
+    rgb(0 0 0 / 15%) 100%);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-left: 4px solid #00d4ff;
+  margin-bottom: 2.5rem;
+  padding: 1.5rem 2rem 2rem;
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 8px 32px rgb(0 0 0 / 12%),
+    inset 0 1px 0 rgb(255 255 255 / 10%);
+}
+
+.formacion-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    #00d4ff 20%, 
+    #2ec4f1 50%, 
+    #00d4ff 80%, 
+    transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.formacion-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 20px 60px rgb(0 212 255 / 15%),
+    0 8px 32px rgb(0 0 0 / 20%),
+    inset 0 1px 0 rgb(255 255 255 / 20%);
+  border-color: rgb(0 212 255 / 30%);
+}
+
+.formacion-item:hover::before {
+  opacity: 1;
+}
+
+.formacion-titulo {
+  color: #00d4ff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  background: linear-gradient(135deg, #00d4ff 0%, #2ec4f1 100%);
+  background-clip: text;
+  position: relative;
+}
+
+.formacion-institucion {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.formacion-institucion::before {
+  content: '🎓';
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  opacity: 0.8;
+}
+
+.formacion-institucion.hackaboss::before,
+.formacion-institucion.fci::before,
+.formacion-institucion.inkor::before,
+.formacion-institucion.nascor::before,
+.formacion-institucion.violeta::before,
+.formacion-institucion.stucom::before {
+  display: none;
+}
+
+.institucion-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  object-fit: cover;
+}
+
+.formacion-descripcion {
+  color: #e8e8e8;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.formacion-descripcion p {
+  margin-bottom: 0.8rem;
+}
+
+.formacion-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.formacion-habilidad {
+  background: linear-gradient(135deg, 
+    rgb(0 212 255 / 12%) 0%, 
+    rgb(46 196 241 / 8%) 100%);
+  color: #00d4ff;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 1px solid rgb(0 212 255 / 25%);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+  position: relative;
+  overflow: hidden;
+}
+
+.formacion-habilidad::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgb(255 255 255 / 10%) 50%, 
+    transparent 100%);
+  transition: left 0.5s ease;
+}
+
+.formacion-habilidad:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgb(0 212 255 / 20%);
+  border-color: rgb(0 212 255 / 40%);
+}
+
+.formacion-habilidad:hover::before {
+  left: 100%;
+}
+
+.formacion-destacado {
+  background: linear-gradient(135deg, 
+    rgb(0 212 255 / 8%) 0%, 
+    rgb(46 196 241 / 4%) 100%);
+  border: 1px solid rgb(0 212 255 / 20%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  position: relative;
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 8%);
+}
+
+.formacion-destacado::before {
+  content: '⭐';
+  position: absolute;
+  top: -8px;
+  left: 1.5rem;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  border: 1px solid rgb(0 212 255 / 30%);
+}
+
+.formacion-destacado p {
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.formacion-destacado strong {
+  color: #00d4ff;
+  font-weight: 700;
+}
+
+.formacion-proyecto-link {
+  color: #00d4ff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.formacion-proyecto-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #00d4ff 0%, #2ec4f1 100%);
+  transition: width 0.3s ease;
+}
+
+.formacion-proyecto-link:hover::after {
+  width: 100%;
+}
+
+@media (width <= 768px) {
+  .formacion-lista {
+    padding: 1rem;
+  }
+  
+  .formacion-item {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  
+  .formacion-titulo {
+    font-size: 1.25rem;
+  }
+  
+  .formacion-institucion {
+    font-size: 0.95rem;
+  }
+  
+  .formacion-descripcion {
+    font-size: 0.9rem;
+  }
+  
+  .formacion-habilidades {
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .formacion-habilidad {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .formacion-destacado {
+    padding: 1.25rem;
+  }
+}

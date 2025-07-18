@@ -1,0 +1,155 @@
+/* Botón flotante para volver al inicio */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(255 255 255 / 6%);
+  border-radius: 50%;
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 4%) 0%, 
+    rgb(255 255 255 / 2%) 50%, 
+    rgb(0 0 0 / 3%) 100%);
+  backdrop-filter: blur(40px) saturate(110%);
+  color: rgb(255 255 255 / 75%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 
+    0 4px 40px rgb(0 0 0 / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 8%),
+    0 0 60px rgb(255 255 255 / 2%);
+}
+
+.scroll-to-top.visible {
+  opacity: 0.8;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-to-top:hover {
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 8%) 0%, 
+    rgb(255 255 255 / 4%) 50%, 
+    rgb(0 0 0 / 5%) 100%);
+  border: 1px solid rgb(255 255 255 / 10%);
+  color: rgb(255 255 255 / 90%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 8px 60px rgb(0 0 0 / 8%),
+    inset 0 1px 0 rgb(255 255 255 / 12%),
+    0 0 80px rgb(255 255 255 / 4%);
+}
+
+.scroll-to-top:active {
+  transform: translateY(0) scale(0.95);
+  transition: all 0.1s ease;
+}
+
+.scroll-to-top svg {
+  transition: transform 0.2s ease;
+}
+
+.scroll-to-top:hover svg {
+  transform: translateY(-1px);
+}
+
+/* Animación de entrada */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animación de onda de luz - VERSIÓN ULTRA LUMINOSA */
+@keyframes scroll-to-top-wave {
+  0% {
+    box-shadow: 
+      0 4px 40px rgb(0 0 0 / 6%),
+      inset 0 1px 0 rgb(255 255 255 / 8%),
+      0 0 60px rgb(255 255 255 / 2%);
+  }
+
+  15% {
+    box-shadow: 
+      0 12px 80px rgb(0 0 0 / 12%),
+      inset 0 1px 0 rgb(255 255 255 / 40%),
+      0 0 200px rgb(255 255 255 / 20%),
+      0 0 40px rgb(255 255 255 / 30%),
+      0 0 80px rgb(255 255 255 / 15%);
+  }
+
+  30% {
+    box-shadow: 
+      0 20px 120px rgb(0 0 0 / 15%),
+      inset 0 1px 0 rgb(255 255 255 / 60%),
+      0 0 400px rgb(255 255 255 / 35%),
+      0 0 80px rgb(255 255 255 / 50%),
+      0 0 160px rgb(255 255 255 / 25%),
+      0 0 240px rgb(255 255 255 / 15%);
+  }
+
+  50% {
+    box-shadow: 
+      0 30px 200px rgb(0 0 0 / 20%),
+      inset 0 1px 0 rgb(255 255 255 / 80%),
+      0 0 600px rgb(255 255 255 / 50%),
+      0 0 120px rgb(255 255 255 / 70%),
+      0 0 240px rgb(255 255 255 / 40%),
+      0 0 360px rgb(255 255 255 / 25%),
+      0 0 480px rgb(255 255 255 / 15%);
+  }
+
+  70% {
+    box-shadow: 
+      0 20px 120px rgb(0 0 0 / 15%),
+      inset 0 1px 0 rgb(255 255 255 / 60%),
+      0 0 400px rgb(255 255 255 / 35%),
+      0 0 80px rgb(255 255 255 / 50%),
+      0 0 160px rgb(255 255 255 / 25%),
+      0 0 240px rgb(255 255 255 / 15%);
+  }
+
+  85% {
+    box-shadow: 
+      0 12px 80px rgb(0 0 0 / 12%),
+      inset 0 1px 0 rgb(255 255 255 / 40%),
+      0 0 200px rgb(255 255 255 / 20%),
+      0 0 40px rgb(255 255 255 / 30%),
+      0 0 80px rgb(255 255 255 / 15%);
+  }
+
+  100% {
+    box-shadow: 
+      0 4px 40px rgb(0 0 0 / 6%),
+      inset 0 1px 0 rgb(255 255 255 / 8%),
+      0 0 60px rgb(255 255 255 / 2%);
+  }
+}
+
+.scroll-to-top.wave-active {
+  animation: scroll-to-top-wave 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}

@@ -1,0 +1,41 @@
+/* Estilos específicos para la vista sobre-mi */
+
+/* Blur específico solo para el fondo de sobre-mi */
+.hero-bg-sobre-mi::before {
+  backdrop-filter: blur(0.15rem);
+}
+
+/* Estilos específicos para las secciones de sobre-mi */
+.sobre-mi-content.section {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.sobre-mi-content.content-section {
+  align-items: center;
+  justify-content: center;
+  background: 
+    radial-gradient(ellipse at top left, rgb(64 64 64 / 8%) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgb(32 32 32 / 6%) 0%, transparent 50%),
+    linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
+  min-height: 100vh;
+  position: relative;
+}
+
+.sobre-mi-content.content-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(45deg, transparent 0%, rgb(64 64 64 / 2%) 50%, transparent 100%),
+    linear-gradient(0deg, rgb(0 0 0 / 40%) 0%, transparent 20%, transparent 80%, rgb(0 0 0 / 40%) 100%);
+  pointer-events: none;
+}
+
+/* Estilos específicos para el hero de sobre-mi */
+.sobre-mi-hero.section {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}

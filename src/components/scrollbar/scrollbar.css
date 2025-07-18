@@ -1,0 +1,128 @@
+/* Scrollbar personalizada con efecto Glass de Apple - BLANCO */
+.custom-scrollbar {
+  position: fixed;
+  top: 80px;
+  right: 15px;
+  bottom: 60px;
+  width: 8px;
+  background: rgb(255 255 255 / 6%);
+  backdrop-filter: blur(60px);
+  border: 1px solid rgb(255 255 255 / 10%);
+  border-radius: 16px;
+  z-index: 999999;
+  box-shadow: 
+    0 4px 40px rgb(0 0 0 / 2%),
+    inset 0 1px 0 rgb(255 255 255 / 8%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  cursor: pointer;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.custom-scrollbar:hover {
+  opacity: 0.9;
+  background: rgb(255 255 255 / 8%);
+  width: 10px;
+}
+
+/* Thumb en estado normal - MUY sutil BLANCO */
+.custom-scrollbar-thumb {
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 8%) 0%,
+    rgb(255 255 255 / 5%) 50%,
+    rgb(255 255 255 / 8%) 100%);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 14px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 
+    0 2px 20px rgb(0 0 0 / 2%),
+    inset 0 1px 0 rgb(255 255 255 / 10%);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: grab;
+}
+
+.custom-scrollbar-thumb:hover {
+  cursor: grab;
+}
+
+.custom-scrollbar-thumb.dragging {
+  cursor: grabbing;
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 35%) 0%,
+    rgb(255 255 255 / 25%) 50%,
+    rgb(255 255 255 / 35%) 100%);
+  border: 1px solid rgb(255 255 255 / 40%);
+  box-shadow: 
+    0 2px 20px rgb(0 0 0 / 4%),
+    inset 0 1px 0 rgb(255 255 255 / 20%),
+    0 0 40px rgb(255 255 255 / 8%),
+    0 0 30px rgb(255 255 255 / 50%),
+    0 0 80px rgb(255 255 255 / 30%);
+}
+
+/* Glow activo SOLO durante scroll - BLANCO BRILLANTE */
+.custom-scrollbar-thumb.scrolling {
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 45%) 0%,
+    rgb(255 255 255 / 35%) 50%,
+    rgb(255 255 255 / 40%) 100%);
+  border: 1px solid rgb(255 255 255 / 60%);
+  box-shadow: 
+    0 2px 20px rgb(0 0 0 / 4%),
+    inset 0 1px 0 rgb(255 255 255 / 20%),
+    0 0 40px rgb(255 255 255 / 8%),
+    0 0 30px rgb(255 255 255 / 60%),
+    0 0 80px rgb(255 255 255 / 40%),
+    0 0 120px rgb(255 255 255 / 30%),
+    0 0 160px rgb(255 255 255 / 20%);
+  animation: scroll-glow 0.6s ease-out;
+}
+
+@keyframes scroll-glow {
+  0% {
+    box-shadow: 
+      0 2px 20px rgb(0 0 0 / 2%),
+      inset 0 1px 0 rgb(255 255 255 / 10%);
+  }
+
+  50% {
+    box-shadow: 
+      0 2px 20px rgb(0 0 0 / 4%),
+      inset 0 1px 0 rgb(255 255 255 / 20%),
+      0 0 40px rgb(255 255 255 / 8%),
+      0 0 50px rgb(255 255 255 / 70%),
+      0 0 120px rgb(255 255 255 / 50%),
+      0 0 200px rgb(255 255 255 / 35%);
+  }
+
+  100% {
+    box-shadow: 
+      0 2px 20px rgb(0 0 0 / 4%),
+      inset 0 1px 0 rgb(255 255 255 / 20%),
+      0 0 40px rgb(255 255 255 / 8%),
+      0 0 30px rgb(255 255 255 / 60%),
+      0 0 80px rgb(255 255 255 / 40%),
+      0 0 120px rgb(255 255 255 / 30%),
+      0 0 160px rgb(255 255 255 / 20%);
+  }
+}
+
+/* Hover del scrollbar - BLANCO PLATEADO */
+.custom-scrollbar:hover .custom-scrollbar-thumb {
+  background: linear-gradient(135deg, 
+    rgb(255 255 255 / 25%) 0%,
+    rgb(255 255 255 / 15%) 100%);
+  border: 1px solid rgb(255 255 255 / 20%);
+  box-shadow: 
+    0 4px 30px rgb(0 0 0 / 6%),
+    inset 0 1px 0 rgb(255 255 255 / 25%),
+    0 0 60px rgb(255 255 255 / 8%),
+    0 0 40px rgb(255 255 255 / 15%);
+  animation: none;
+}
