@@ -1,0 +1,6 @@
+# Netlify redirects file
+# Servir archivos estáticos directamente
+/CV_Javier_Espinosa_2025.pdf /CV_Javier_Espinosa_2025.pdf 200
+
+# SPA fallback - todas las rutas no encontradas van al index.html
+/* /index.html 200

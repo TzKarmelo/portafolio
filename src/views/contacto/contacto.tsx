@@ -96,7 +96,7 @@ export default function Contacto({ title }: { title: string }) {
                 </a>
                 
                 <a 
-                  href="/data/CV_Javier_Espinosa_2025.pdf" 
+                  href="/CV_Javier_Espinosa_2025.pdf" 
                   download="CV_Javier_Espinosa_2025.pdf"
                   className="contacto-social-link cv"
                   aria-label="Descargar CV"
