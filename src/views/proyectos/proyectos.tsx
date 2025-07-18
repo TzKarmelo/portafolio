@@ -1,6 +1,5 @@
 import { useScrollSnap } from '../../hooks/useScrollSnap';
 import './proyectos.css';
-import fondoProyectos from '/images/fondoProyectos.jpg';
 
 export default function Proyectos({ title }: { title: string }) {
   document.title = title;
@@ -8,7 +7,7 @@ export default function Proyectos({ title }: { title: string }) {
 
   return (
     <div className="main-scroll-container" ref={containerRef}>
-      <div className="hero-bg section proyectos-hero" style={{ backgroundImage: `url(${fondoProyectos})` }}>
+      <div className="hero-bg section proyectos-hero" style={{ backgroundImage: `url(/images/fondoProyectos.jpg)` }}>
         <div className="hero-content">
           <h1 className="hero-title">
             MIS <span className="hero-highlight">PROYECTOS</span>

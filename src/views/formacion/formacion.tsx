@@ -1,6 +1,5 @@
 import { useScrollSnap } from '../../hooks/useScrollSnap';
 import './formacion.css';
-import fondoFormacion from '/images/fondoFormacion.png';
 
 export default function Formacion({ title }: { title: string }) {
   document.title = title;
@@ -8,7 +7,7 @@ export default function Formacion({ title }: { title: string }) {
 
   return (
     <div className="main-scroll-container" ref={containerRef}>
-      <div className="hero-bg section formacion-hero" style={{ backgroundImage: `url(${fondoFormacion})` }}>
+      <div className="hero-bg section formacion-hero" style={{ backgroundImage: `url(/images/fondoFormacion.png)` }}>
         <div className="hero-content">
           <h1 className="hero-title">
             FORMACIÓN <span className="hero-highlight">ACADÉMICA</span>

@@ -1,7 +1,6 @@
 import { useRef, useEffect } from "react";
 import { useScrollSnap } from '../../hooks/useScrollSnap';
 import "./sobre-mi.css";
-import fondoSobremi from '/images/fondoSobremi.jpg';
 
 export default function SobreMi({ title }: { title: string }) {
   document.title = title;
@@ -40,7 +39,7 @@ export default function SobreMi({ title }: { title: string }) {
 
   return (
     <div className="main-scroll-container" ref={containerRef}>
-      <div className="hero-bg hero-bg-sobre-mi section sobre-mi-hero" style={{ backgroundImage: `url(${fondoSobremi})` }}>
+      <div className="hero-bg hero-bg-sobre-mi section sobre-mi-hero" style={{ backgroundImage: `url(/images/fondoSobremi.jpg)` }}>
         <div className="hero-content">
           <span className="hero-welcome">Bienvenido a</span>
           <h1 className="hero-title">

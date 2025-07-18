@@ -1,6 +1,5 @@
 import { useScrollSnap } from '../../hooks/useScrollSnap';
 import './experiencia.css';
-import fondoExperiencia from '/images/fondoExperiencia.webp';
 
 export default function Experiencia({ title }: { title: string }) {
   document.title = title;
@@ -8,7 +7,7 @@ export default function Experiencia({ title }: { title: string }) {
 
   return (
     <div className="main-scroll-container" ref={containerRef}>
-      <div className="hero-bg section experiencia-hero" style={{ backgroundImage: `url(${fondoExperiencia})` }}>
+      <div className="hero-bg section experiencia-hero" style={{ backgroundImage: `url(/images/fondoExperiencia.webp)` }}>
         <div className="hero-content">
           <h1 className="hero-title">
             MI <span className="hero-highlight">EXPERIENCIA</span>
