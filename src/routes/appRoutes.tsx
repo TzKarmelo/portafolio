@@ -18,19 +18,19 @@ const appRoutes = [
 	},
 	{
 		path: '/experiencia',
-		element: <Experiencia title='TalentRank - Experiencia' />
+		element: <Experiencia title='Experiencia' />
 	},
 	{
 		path: '/formacion',
-		element: <Formacion title='New Dev - TalentRank' />
+		element: <Formacion title='Formación' />
 	},
 	{
 		path: '/proyectos',
-		element: <Proyectos title='TalentRank - View Profile' />
+		element: <Proyectos title='Proyectos' />
 	},
 	{
 		path: '/contacto',
-		element: <Contacto title='TalentRank - View Profile' />
+		element: <Contacto title='Contacto' />
 	},
 	{
 		path: '*',
