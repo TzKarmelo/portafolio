@@ -1,11 +1,7 @@
-/* Estilos específicos para la vista sobre-mi */
-
-/* Blur específico solo para el fondo de sobre-mi */
 .hero-bg-sobre-mi::before {
   backdrop-filter: blur(0.15rem);
 }
 
-/* Estilos específicos para las secciones de sobre-mi */
 .sobre-mi-content.section {
   height: 100vh;
   align-items: center;
@@ -21,7 +17,7 @@
     linear-gradient(180deg, #000 0%, #0a0a0a 50%, #000 100%);
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
@@ -38,7 +34,6 @@
   pointer-events: none;
 }
 
-/* Estilos específicos para el hero de sobre-mi */
 .sobre-mi-hero.section {
   height: 100vh;
   align-items: center;

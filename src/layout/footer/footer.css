@@ -95,7 +95,6 @@
   color: white;
 }
 
-/* Responsive */
 @media (width <= 768px) {
   .footer-content {
     flex-direction: column;

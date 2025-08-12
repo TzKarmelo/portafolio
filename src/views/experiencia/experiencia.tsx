@@ -16,7 +16,6 @@ export default function Experiencia({ title }: { title: string }) {
       </div>
       <section className="content-section section experiencia-content">
         <div className="experiencia-grid">
-          {/* Bloque Softtek */}
           <div className="experiencia-block">
             <div className="experiencia-header">
               <div className="experiencia-logo">
@@ -72,7 +71,6 @@ export default function Experiencia({ title }: { title: string }) {
             </div>
           </div>
 
-          {/* Bloque Pentrilo */}
           <div className="experiencia-block">
             <div className="experiencia-header">
               <div className="experiencia-logo">
@@ -124,7 +122,6 @@ export default function Experiencia({ title }: { title: string }) {
             </div>
           </div>
 
-          {/* Bloque OptimoClick */}
           <div className="experiencia-block">
             <div className="experiencia-header">
               <div className="experiencia-logo">
@@ -180,7 +177,6 @@ export default function Experiencia({ title }: { title: string }) {
             </div>
           </div>
 
-          {/* Bloque EUROAULA */}
           <div className="experiencia-block">
             <div className="experiencia-header">
               <div className="experiencia-logo">

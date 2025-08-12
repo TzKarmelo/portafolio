@@ -1,4 +1,4 @@
-/* Botón flotante para volver al inicio */
+
 .scroll-to-top {
   position: fixed;
   bottom: 45px;
@@ -61,7 +61,7 @@
   transform: translateY(-1px);
 }
 
-/* Animación de entrada */
+
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -74,7 +74,7 @@
   }
 }
 
-/* Animación de onda de luz - VERSIÓN ULTRA LUMINOSA */
+
 @keyframes scroll-to-top-wave {
   0% {
     box-shadow: 
@@ -144,7 +144,7 @@
   animation: scroll-to-top-wave 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Responsive */
+
 @media (width <= 768px) {
   .scroll-to-top {
     bottom: 40px;

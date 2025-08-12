@@ -1,4 +1,3 @@
-/* Header principal */
 .header {
   display: flex;
   justify-content: space-between;
@@ -90,7 +89,6 @@
   font-weight: 500;
 }
 
-/* Botón hamburguesa */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -126,7 +124,6 @@
   transform: translateY(-0.63rem) rotate(-45deg);
 }
 
-/* Responsive */
 @media (width <= 900px) {
   .header {
     padding: 0 1vw;

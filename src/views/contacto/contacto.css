@@ -1,13 +1,10 @@
-/* Estilos específicos para la vista contacto */
-
-/* Estilos específicos para las secciones de contacto */
 .contacto-content.section {
   height: auto;
   min-height: 100vh;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-top: 6rem; /* Aumentado para evitar solapamiento con header */
-  overflow: visible; /* Asegurar que el contenido no se corte */
+  padding-top: 6rem;
+  overflow: visible;
 }
 
 .contacto-content.content-section {
@@ -20,8 +17,8 @@
   min-height: 100vh;
   height: auto;
   position: relative;
-  padding-bottom: 160px; /* Aumentado aún más para asegurar que el footer no tape el contenido */
-  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  padding-bottom: 160px;
+  overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
@@ -46,9 +43,9 @@
 .contacto-lista {
   max-width: 1200px;
   width: 100%;
-  padding: 2rem 1rem; /* Ajustado el padding lateral */
+  padding: 2rem 1rem; 
   padding-top: 0;
-  padding-bottom: 6rem; /* Aumentado para dar más espacio al final */
+  padding-bottom: 6rem; 
   color: #fff;
   margin: 0 auto;
   display: flex;
@@ -57,7 +54,7 @@
   justify-content: flex-start;
   gap: 2rem;
   box-sizing: border-box;
-  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  overflow-x: hidden; 
 }
 
 .contacto-item {
@@ -235,12 +232,12 @@
   gap: 1.5rem;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 3rem; /* Añadido margin-bottom para separar del final */
+  margin-bottom: 3rem; 
   box-sizing: border-box;
-  padding: 0 1rem; /* Añadido padding para evitar cortes laterales */
+  padding: 0 1rem; 
 }
 
-/* Responsive para el grid */
+
 @media (width <= 1024px) {
   .contacto-social-links {
     grid-template-columns: repeat(2, 1fr);
@@ -403,7 +400,7 @@
   letter-spacing: 0.02em;
 }
 
-/* Colores específicos para cada red social - con bordes izquierdos como formación */
+
 .contacto-social-link.linkedin {
   border-left: 4px solid #0077b5;
 }
@@ -509,13 +506,13 @@
   border-color: rgb(59 130 246 / 25%);
 }
 
-/* Ajustes para el nuevo layout */
+
 .contacto-info-wrapper {
   display: block;
   width: 100%;
 }
 
-/* Responsive para el grid */
+
 @media (width <= 1024px) {
   .contacto-info-grid {
     grid-template-columns: 1fr;
@@ -542,8 +539,8 @@
   
   .contacto-content.section {
     padding: 1rem 0.5rem;
-    padding-top: 5rem; /* Espacio extra para evitar solapamiento */
-    padding-bottom: 120px; /* Aumentado para mobile */
+    padding-top: 5rem; 
+    padding-bottom: 120px; 
   }
   
   .contacto-social-links {
@@ -588,7 +585,7 @@
   }
   
   .contacto-lista {
-    padding: 1rem 0.5rem; /* Ajustado padding lateral */
+    padding: 1rem 0.5rem; 
     gap: 1.5rem;
     width: 100%;
     max-width: 100vw;
@@ -643,16 +640,16 @@
 
   .contacto-content.section {
     padding: 0.3rem;
-    padding-top: 4.5rem; /* Aumentado para evitar solapamiento */
-    padding-bottom: 100px; /* Aumentado para mobile */
+    padding-top: 4.5rem; 
+    padding-bottom: 100px; 
     align-items: center;
     justify-content: flex-start;
   }
 
   .contacto-lista {
-    padding: 0.3rem 0.2rem; /* Ajustado padding lateral */
+    padding: 0.3rem 0.2rem; 
     margin: 0 auto;
-    margin-bottom: 60px; /* Aumentado el margin-bottom */
+    margin-bottom: 60px; 
     width: 95vw;
     max-width: 95vw;
     box-sizing: border-box;
@@ -722,14 +719,14 @@
 @media (width <= 400px) {
   .contacto-content.section {
     padding: 0.2rem;
-    padding-top: 4rem; /* Aumentado para evitar solapamiento */
-    padding-bottom: 120px; /* Aumentado significativamente para pantallas pequeñas */
+    padding-top: 4rem; 
+    padding-bottom: 120px; 
   }
 
   .contacto-lista {
-    padding: 0.2rem 0.1rem; /* Ajustado padding lateral para pantallas muy pequeñas */
+    padding: 0.2rem 0.1rem; 
     margin: 0 auto;
-    margin-bottom: 80px; /* Aumentado el margin-bottom para pantallas pequeñas */
+    margin-bottom: 80px; 
     width: 98vw;
     max-width: 98vw;
     box-sizing: border-box;

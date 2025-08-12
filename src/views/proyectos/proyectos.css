@@ -1,6 +1,3 @@
-/* Estilos específicos para la vista proyectos */
-
-/* Estilos específicos para las secciones de proyectos */
 .proyectos-content.section {
   height: auto;
   min-height: 100vh;
@@ -19,39 +16,38 @@
   min-height: 100vh;
   height: auto;
   position: relative;
-  overflow-x: hidden; /* Evitar desbordamiento horizontal */
+  overflow-x: hidden;
   width: 100%;
   max-width: 100vw;
   box-sizing: border-box;
   padding-bottom: 160px;
 }
 
-/* Estilos específicos para el contenedor de proyectos */
 .proyectos-content .content-container {
-  width: 100%; /* Volvemos al 100% */
-  max-width: 1100px; /* Aumentamos el max-width */
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 2rem; /* Padding normal */
+  padding: 2rem;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 .proyectos-content .content-description {
-  width: 100%; /* Volvemos al 100% */
-  max-width: 800px; /* Aumentamos el max-width */
+  width: 100%;
+  max-width: 800px;
   margin: 0 auto 2rem;
-  padding: 0 2rem; /* Padding normal */
+  padding: 0 2rem;
   box-sizing: border-box;
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
-  text-align: center; /* Centrado para mejor presentación */
-  line-height: 1.6; /* Mejor legibilidad */
+  text-align: center;
+  line-height: 1.6;
 }
 
 .proyectos-content .content-foto {
-  width: 100%; /* Volvemos al 100% */
-  max-width: 600px; /* Aumentamos el max-width */
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   box-sizing: border-box;
   overflow: hidden;
@@ -61,8 +57,8 @@
 }
 
 .proyectos-content .content-foto-img {
-  width: 100%; /* Volvemos al 100% */
-  max-width: 500px; /* Aumentamos el max-width */
+  width: 100%;
+  max-width: 500px;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -81,14 +77,12 @@
   pointer-events: none;
 }
 
-/* Estilos específicos para el hero de proyectos */
 .proyectos-hero.section {
   height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
-/* Responsive */
 @media (width <= 768px) {
   .proyectos-hero.section {
     align-items: center;
@@ -101,32 +95,32 @@
   }
   
   .proyectos-content .content-container {
-    padding: 1.5rem; /* Padding razonable */
+    padding: 1.5rem;
     flex-direction: column;
     gap: 1.5rem;
-    width: 96%; /* Ligeramente reducido para evitar cortes */
+    width: 96%;
     max-width: 96%;
   }
   
   .proyectos-content .content-description {
     font-size: 1rem;
-    padding: 0 1rem; /* Padding moderado */
+    padding: 0 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    width: 94%; /* Ligeramente reducido */
+    width: 94%;
     max-width: 94%;
   }
   
   .proyectos-content .content-foto {
     margin: 0 auto;
-    padding: 0 1rem; /* Padding moderado */
-    width: 94%; /* Ligeramente reducido */
+    padding: 0 1rem;
+    width: 94%;
     max-width: 94%;
   }
   
   .proyectos-content .content-foto-img {
-    max-width: 400px; /* Tamaño razonable */
-    width: 90%; /* Evitar cortes */
+    max-width: 400px;
+    width: 90%;
   }
 }
 
@@ -150,30 +144,30 @@
   }
   
   .proyectos-content .content-container {
-    padding: 1rem; /* Padding razonable */
-    width: 94%; /* Ligeramente reducido para evitar cortes */
+    padding: 1rem;
+    width: 94%;
     max-width: 94%;
     margin: 0 auto;
   }
   
   .proyectos-content .content-description {
     font-size: 0.9rem;
-    padding: 0 0.8rem; /* Padding moderado */
+    padding: 0 0.8rem;
     margin-bottom: 1rem;
     line-height: 1.5;
-    width: 92%; /* Ligeramente reducido */
+    width: 92%;
     max-width: 92%;
   }
   
   .proyectos-content .content-foto {
-    padding: 0 0.8rem; /* Padding moderado */
-    width: 92%; /* Ligeramente reducido */
+    padding: 0 0.8rem;
+    width: 92%;
     max-width: 92%;
   }
   
   .proyectos-content .content-foto-img {
-    max-width: 350px; /* Tamaño razonable */
-    width: 85%; /* Evitar cortes */
+    max-width: 350px;
+    width: 85%;
     border-radius: 0.5rem;
   }
 }
@@ -191,30 +185,30 @@
   }
   
   .proyectos-content .content-container {
-    padding: 0.8rem; /* Padding razonable */
-    width: 92%; /* Ligeramente reducido para evitar cortes */
+    padding: 0.8rem;
+    width: 92%;
     max-width: 92%;
     margin: 0 auto;
   }
   
   .proyectos-content .content-description {
     font-size: 0.8rem;
-    padding: 0 0.6rem; /* Padding moderado */
+    padding: 0 0.6rem;
     margin-bottom: 0.8rem;
     line-height: 1.4;
-    width: 90%; /* Ligeramente reducido */
+    width: 90%;
     max-width: 90%;
   }
   
   .proyectos-content .content-foto {
-    padding: 0 0.6rem; /* Padding moderado */
-    width: 90%; /* Ligeramente reducido */
+    padding: 0 0.6rem;
+    width: 90%;
     max-width: 90%;
   }
   
   .proyectos-content .content-foto-img {
-    max-width: 280px; /* Tamaño razonable para móvil pequeño */
-    width: 80%; /* Evitar cortes */
+    max-width: 280px;
+    width: 80%;
     border-radius: 0.4rem;
     border-width: 0.2rem;
   }
